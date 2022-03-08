@@ -11,26 +11,21 @@
 
     <artifactId>atm</artifactId>
 
-    <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-    </properties>
-
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <artifactId>atm_dto</artifactId>
-            <groupId>com.github.divanchess.atm</groupId>
-            <version>${project.version}</version>
-        </dependency>
         <dependency>
             <artifactId>common</artifactId>
             <groupId>com.github.divanchess.atm</groupId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
