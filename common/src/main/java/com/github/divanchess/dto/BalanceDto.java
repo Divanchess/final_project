@@ -1,16 +1,14 @@
 package com.github.divanchess.dto;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import java.math.BigDecimal;
 
 @Data
 @NoArgsConstructor
 @RequiredArgsConstructor
-public class BalanceDto implements Dto {
+
+public class BalanceDto {
     @NonNull
     private BigDecimal amount;
 }

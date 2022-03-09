@@ -25,4 +25,22 @@ public class MappingUtils {
         dto.setAccountDtoList(accountDtoList);
         return dto;
     }
+
+    //из dto в entity
+    public Card mapCardDtoToCardEntity(CardDto dto){
+        Card entity = new Card();
+        entity.setPan(dto.getPan());
+        entity.setPin(dto.getPin());
+        List<Account> accountList = new ArrayList<>();
+        List<AccountDto> accountDtoSet = dto.getAccountDtoList();
+        for (AccountDto accountDto : accountDtoSet) {
+            Account account = new Account();
+            account.setNumber(accountDto.getNumber());
+            account.setId(accountDto.getAccountId());
+            account.setBalance(accountDto.getBalance().getAmount());
+            accountList.add(account);
+        }
+        entity.setAccounts(accountList);
+        return entity;
+    }
 }

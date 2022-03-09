@@ -9,4 +9,5 @@ import java.util.Optional;
 @Repository
 public interface CardRepository extends CrudRepository<Card, String> {
     Optional<Card> findByPan(String pan);
+    Optional<Card> findByPanAndPin(String pan, int pin);
 }

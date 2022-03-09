@@ -8,10 +8,9 @@ import java.util.List;
 @NoArgsConstructor
 @RequiredArgsConstructor
 
-public class CardDto implements Dto {
+public class CardDto {
     @NonNull
     private String pan;
-    @NonNull
     private int pin;
     private List<AccountDto> accountDtoList;
 }
