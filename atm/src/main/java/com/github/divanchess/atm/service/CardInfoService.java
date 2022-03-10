@@ -15,9 +15,9 @@ import java.util.Arrays;
 @Service
 @Slf4j
 public class CardInfoService {
-    private String serverUrl;
-    private String serverLogin;
-    private String serverPassword;
+    private final String serverUrl;
+    private final String serverLogin;
+    private final String serverPassword;
 
     public CardInfoService(@Value("${remote.server.url}") String serverUrl,
                            @Value("${remote.server.login}") String serverLogin,
